@@ -11,9 +11,8 @@ const thoughtSchema = new Schema(
             max_length: 280,
         },
         createdAt: {
-            type: Date,
-            default: Date.now,
-            get: currentDate,
+            type: String,
+            default: () => currentDate(),
         },
         username: {
             type: String,
